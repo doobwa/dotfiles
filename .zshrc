@@ -2,7 +2,7 @@
 
 . ~/.zsh/env
 . ~/.zsh/function
-. ~/.zsh/zle
+#. ~/.zsh/zle
 . ~/.zsh/style
 . ~/.zsh/opts
 . ~/.zsh/export
