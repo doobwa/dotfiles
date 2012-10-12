@@ -11,13 +11,14 @@ if [ $RESP != "y" ]; then
     exit;
 fi
 
-for file in $(ls -A); do
-    if [ "$file" != "install.sh" -a "$file" != ".git" ]; then
+for file in ".zshrc" ".zsh" ".gitconfig" ".screenrc" ".emacs"
+do
+#    if [ "$file" != "install.sh" -a "$file" != ".git" ]; then
+	echo "Found $file"
         if [ -e "$HOME/$file" -a ! -L "$HOME/$file" ]; then
             echo "Creating backup: $HOME/$file => $HOME/$file.bak"
             mv $HOME/$file $HOME/$file.bak
         fi
         ln -sfT $PWD/$file $HOME/$file
         echo "INSTALLED ~/$file"
-    fi
 done
