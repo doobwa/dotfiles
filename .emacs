@@ -1,6 +1,18 @@
+
+
 ;; This .emacs file is based off of init.el from emacs-kicker.
 ;; It uses el-get to manage installed packages.
 
+;; Personal add ons:
+
+;; Julia mode
+(add-to-list 'load-path "~/julia/contrib/") ;Tell emacs to look for the file there.
+(require 'julia-mode)                             ;Tell it to load it.
+(setq auto-mode-alist                             ;Tell it to go to julia-mode when a Julia file(.jl) is spotted.
+      (append '(("\\.jl$" . julia-mode)) auto-mode-alist))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Other stuff
 (require 'cl)               ; common lisp goodies, loop
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil t)
