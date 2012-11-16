@@ -8,9 +8,9 @@ export CVS_RSH="ssh"
 export PYTHONSTARTUP=~/.pystartup
 
 # virtualenv stuff
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
-export VIRTUALENV_DISTRIBUTE=1
+# export WORKON_HOME=$HOME/.virtualenvs
+# source /usr/bin/virtualenvwrapper.sh
+# export VIRTUALENV_DISTRIBUTE=1
 
 export ILOG_LICENSE_FILE=/home/drew/ILOG/ilm/access.ilm
 
