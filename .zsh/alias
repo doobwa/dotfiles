@@ -52,7 +52,7 @@ alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}="mirage"
 alias -s {mpg,mpeg,avi,ogm,wmv,m4v,mp4,mov}="mplayer -idx"
 alias -s {mp3,ogg,wav,flac}="cplay"
 alias -s {html,php,com,net,org,gov}="firefox"
-alias -s txt="vim"
+alias -s txt="emacs"
 alias -s pdf="evince"
 
 ## global pipe aliases
