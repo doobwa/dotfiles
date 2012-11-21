@@ -178,3 +178,21 @@
 ;;         (R . t)
 ;;         (sh . t)
 ;; ))
+
+(require 'org-latex)
+  (setq org-export-latex-classes
+        (cons '("article"
+                "\\documentclass{article}
+  \\usepackage{amsmath}
+  \\usepackage{amssymb}
+  \\usepackage{longtable}
+  \\usepackage{float}
+  \\usepackage{wrapfig}
+  \\usepackage{soul}
+  \\usepackage{hyperref}"
+                ("\\section{%s}" . "\\section*{%s}")
+                ("\\subsection{%s}" . "\\subsection*{%s}")
+                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+              org-export-latex-classes))
